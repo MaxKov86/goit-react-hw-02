@@ -1,0 +1,19 @@
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.positiveColor {
+  color: rgba(52, 219, 46, 0.74);
+  margin-left: 7px;
+}
+
+.badColor {
+  color: red;
+  margin-left: 7px;
+}
