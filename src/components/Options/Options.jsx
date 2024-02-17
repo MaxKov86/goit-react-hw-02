@@ -1,20 +1,40 @@
 import css from "./Options.module.css";
 export const Options = ({
-  handleGoodClick,
-  handleNeutralClick,
-  handleBadClick,
+  onFeedbackUpdate,
   handleResetClick,
   totalFeedback,
 }) => {
+  const handelFeedbackClick = (name) => {
+    onFeedbackUpdate(name);
+  };
+
   return (
     <div className={css.buttonContainer}>
-      <button className={css.button} type="button" onClick={handleGoodClick}>
+      <button
+        className={css.button}
+        type="button"
+        onClick={() => {
+          handelFeedbackClick("good");
+        }}
+      >
         Good
       </button>
-      <button className={css.button} type="button" onClick={handleNeutralClick}>
+      <button
+        className={css.button}
+        type="button"
+        onClick={() => {
+          handelFeedbackClick("neutral");
+        }}
+      >
         Neutral
       </button>
-      <button className={css.button} type="button" onClick={handleBadClick}>
+      <button
+        className={css.button}
+        type="button"
+        onClick={() => {
+          handelFeedbackClick("bad");
+        }}
+      >
         Bad
       </button>
       {totalFeedback > 0 && (
